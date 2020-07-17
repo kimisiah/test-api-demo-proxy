@@ -1,3 +1,5 @@
+## DISCLAIMER: This repository is for demo purpose only and is not for commercial use.
+
 ## Getting Started
 - [Download and install Maven 3.*](http://maven.apache.org/download.cgi)
 - Clone this repo https://github.com/kimisiah/test-api-demo-proxy.git
