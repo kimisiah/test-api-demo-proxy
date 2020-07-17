@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>OAuthV2VerifyAccessToken</Name>
+            </Step>
+            <Step>
+                <Name>SpikeArrest</Name>
+            </Step>
+            <Step>
+                <Name>RegularExpressionProtection</Name>
+            </Step>
+            <Step>
+                <Name>MessageLoggingSetRequestLog</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <PostClientFlow>
+        <Request/>
+        <Response>
+            <Step>
+                <Name>MessageLoggingSetResponseLog</Name>
+            </Step>
+        </Response>
+    </PostClientFlow>
+    <Flows>
+        <Flow name="getAccountDetails">
+            <Description>Retrieves the user's account details</Description>
+            <Request/>
+            <Response>
+                <Step>
+                    <Name>CalloutGetAccountDetails</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/bank/account") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="getCreditCardDetails">
+            <Description>Retrieves the user's credit card details</Description>
+            <Request/>
+            <Response>
+                <Step>
+                    <Name>CalloutGetCreditCardDetails</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/creditcard/account") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="getInsuranceDetails">
+            <Description>Retrieves the user's insurance details</Description>
+            <Request/>
+            <Response>
+                <Step>
+                    <Name>CalloutGetInsuranceDetails</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/insurance/account") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="getFinancialDetails">
+            <Description>Retrieves the user's financial details</Description>
+            <Request/>
+            <Response>
+                <Step>
+                    <Name>CalloutGetAccountDetails</Name>
+                </Step>
+                <Step>
+                    <Name>ExtractGetAccountDetailsCalloutResponse</Name>
+                </Step>
+                <Step>
+                    <Name>CalloutGetCreditCardDetails</Name>
+                </Step>
+                <Step>
+                    <Name>ExtractGetCreditCardDetailsCalloutResponse</Name>
+                </Step>
+                <Step>
+                    <Name>CalloutGetInsuranceDetails</Name>
+                </Step>
+                <Step>
+                    <Name>ExtractGetInsuranceDetailsCalloutResponse</Name>
+                </Step>
+                <Step>
+                    <Name>AssignSetFinancialDetailsResponse</Name>
+                </Step>
+                <Step>
+                    <Name>JSONToXML</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/financials") and (request.verb = "GET")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/demo/v1</BasePath>
+        <Properties/>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="CalloutGetAccountDetails">
+    <DisplayName>Callout.GetAccountDetails</DisplayName>
+    <Properties/>
+    <Request clearPayload="true" variable="getAccountDetailsRequest">
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+        <Copy source="request">
+            <Headers>true</Headers>
+        </Copy>
+    </Request>
+    <Response>response</Response>
+    <LocalTargetConnection>
+        <!--<APIProxy>MockService-v1</APIProxy>-->
+        <!--<ProxyEndpoint>default</ProxyEndpoint>-->
+        <Path>/mock/v1/bank/account</Path>
+        <Properties>
+            <Property name="success.codes">1xx,2xx,3xx,4xx,5xx</Property>
+        </Properties>
+    </LocalTargetConnection>
+</ServiceCallout>

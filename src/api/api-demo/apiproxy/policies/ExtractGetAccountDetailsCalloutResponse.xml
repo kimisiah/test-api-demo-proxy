@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="ExtractGetAccountDetailsCalloutResponse">
+    <DisplayName>Extract.GetAccountDetailsCalloutResponse</DisplayName>
+    <Properties/>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <Variable name="id">
+            <JSONPath>$.id</JSONPath>
+        </Variable>
+        <Variable name="name">
+            <JSONPath>$.accountName</JSONPath>
+        </Variable>
+        <Variable name="type">
+            <JSONPath>$.accountType</JSONPath>
+        </Variable>
+        <Variable name="balance">
+            <JSONPath>$.balance</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <Source clearPayload="false">response</Source>
+    <VariablePrefix>account</VariablePrefix>
+</ExtractVariables>

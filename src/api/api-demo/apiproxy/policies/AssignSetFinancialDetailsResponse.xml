@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignSetFinancialDetailsResponse">
+    <DisplayName>Assign.SetFinancialDetailsResponse</DisplayName>
+    <Properties/>
+    <Set>
+        <Payload contentType="application/json">
+            {
+                "accountId": {account.id},
+                "accountName": "{account.name}",
+                "accountType": "{account.type}",
+                "accountBalance": "{account.balance}",
+                "creditCardNumber": {creditcard.number},
+                "creditCardLimit": "{creditcard.limit}",
+                "creditCardBalance": "{creditcard.balance}",
+                "insuranceId": {insurance.id},
+                "insuranceType": "{insurance.type}",
+                "insuranceBalance": "{insurance.balance}"
+            }
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="FinanceDemo-v1">
+    <Basepaths>/demo/v1</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1575970545761</CreatedAt>
+    <CreatedBy>ramolito.javier.jr@gmail.com</CreatedBy>
+    <Description>API proxy that contains bank, credit card and insurance endpoints</Description>
+    <DisplayName>FinanceDemo-v1</DisplayName>
+    <LastModifiedAt>1575970659367</LastModifiedAt>
+    <LastModifiedBy>ramolito.javier.jr@gmail.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:d7f6781cb6003135355ff12c2b11b241a93606be122282aa8b485387dc000b7673c4856b7a08e829fe0cec9f24f2fa715d2ec9a5eb231d968752a8f34a7291ca</ManifestVersion>
+    <Policies>
+        <Policy>AssignSetFinancialDetailsResponse</Policy>
+        <Policy>CalloutGetAccountDetails</Policy>
+        <Policy>CalloutGetCreditCardDetails</Policy>
+        <Policy>CalloutGetInsuranceDetails</Policy>
+        <Policy>ExtractGetAccountDetailsCalloutResponse</Policy>
+        <Policy>ExtractGetCreditCardDetailsCalloutResponse</Policy>
+        <Policy>ExtractGetInsuranceDetailsCalloutResponse</Policy>
+        <Policy>JSONToXML</Policy>
+        <Policy>MessageLoggingSetRequestLog</Policy>
+        <Policy>MessageLoggingSetResponseLog</Policy>
+        <Policy>OAuthV2VerifyAccessToken</Policy>
+        <Policy>RegularExpressionProtection</Policy>
+        <Policy>SpikeArrest</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+</APIProxy>

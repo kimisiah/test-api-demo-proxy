@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AssignSetFinancialDetailsResponse" version="SHA-512:7f219c047842768754ec2fd5566f13558778fc6a307e10a4f9ab1e857befbded8f1adea0fb738b7470f949d89be0a2361ca37c388566231e219101698a206840"/>
+        <VersionInfo resourceName="CalloutGetAccountDetails" version="SHA-512:09a84ba440da36406d9ede1a7ef45967f88354da95dd6143715d45e7e8176ab6daf9ffd1064a05f94306830986164b7b7de26a030d24b95a60b23be879999e25"/>
+        <VersionInfo resourceName="CalloutGetCreditCardDetails" version="SHA-512:921e455afdfebfefdb0c4e43a2aa49031d068ac4544ed17c4975976d4ad4d9aeb3cfa185825e7c619efd3b5adc20ba3a33dcb985608626734729e66adcc65dd3"/>
+        <VersionInfo resourceName="CalloutGetInsuranceDetails" version="SHA-512:0fa69ea2cc3c3e35bed4d6fbd19ac13642156340bca7b260f57961158e87dc065d10d49e5911648779733a3e7c84cfc577a278ae2528c0600254636cff618a97"/>
+        <VersionInfo resourceName="ExtractGetAccountDetailsCalloutResponse" version="SHA-512:9ca4b25293a711e658eeaa564c35dbdbeead269ef1007df54761465b10bd6f6a97b9bbcc90fc4d956c5253f3c9007fbff105e645b2ab46fb007ea684c0b89f78"/>
+        <VersionInfo resourceName="ExtractGetCreditCardDetailsCalloutResponse" version="SHA-512:d225c58ae82645e954218836babf162a72549656ecbd0e2aad5a2795582feee89f5bf51f40ad100d34b651598177f8dc15a15a75bfef12a071b073742662e4c6"/>
+        <VersionInfo resourceName="ExtractGetInsuranceDetailsCalloutResponse" version="SHA-512:4f5aa2e8648acb349bf9a5210a2a1b10628951ee97db8a40b3401587393a5d69645277440af2b8587e2dff78e4f2a7ae3e26115ab2696eb04dd8c3bab864e047"/>
+        <VersionInfo resourceName="JSONToXML" version="SHA-512:ef5d3278d16b103437b20c3040412e7c4405aa2aad9a8820fa834ce4c235420da46c33ac7db1cc1596adeffd2343f3c4e0dee3fde9a5af39911e701fad480848"/>
+        <VersionInfo resourceName="MessageLoggingSetRequestLog" version="SHA-512:836ec18c505953a8d70489dfb48fe5a5590b99a7902041bf2cec07f45fd4d13a50bc8c370ed51eb3e50cecfa24b74eedf3a4d05c002ade5565a19731bd631137"/>
+        <VersionInfo resourceName="MessageLoggingSetResponseLog" version="SHA-512:dfb3e10f90528d1a04a7f1e28db4e6b6ba568fb7ad9cce728255e8a5c5133bded8b7d74322035d6ce0e46c260127c6771a1a8f17787387b085caf6305cdb9d86"/>
+        <VersionInfo resourceName="OAuthV2VerifyAccessToken" version="SHA-512:1be7de51af0c16ef48e84f66e95c3e37bd6e57b21570bb267b3c281409eccf525e2baa742f6242ae51329b799cbbac972754c357f9391a86be5cda1ded634683"/>
+        <VersionInfo resourceName="RegularExpressionProtection" version="SHA-512:4e26fa7ce7471082ffbde81456b155ebbe49cb5de04696208613d3d4283402ffb794c95d9e0827e264fc508d2bbc17302d2a762a0f820f16257ffe4ca2874099"/>
+        <VersionInfo resourceName="SpikeArrest" version="SHA-512:4c36a63a58d01e2508ff593cc6be4665813b3df3e5228855fe847683b54f792edf05a91d224e0832efc0777cc94047f61a9a2069fe0b396d63228b2faf269e96"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:39e2ca78fbdedaae7ddcaac45ec78ced014f51b907021f732790f3ae12b0b1610ebdd6d395b272fcdcfa113100d25650a4c790e0705d234f15db1eefdb7a6e9b"/>
+    </ProxyEndpoints>
+    <Resources/>
+    <SharedFlows/>
+    <TargetEndpoints/>
+</Manifest>

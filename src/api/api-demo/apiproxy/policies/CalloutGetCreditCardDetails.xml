@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="CalloutGetCreditCardDetails">
+    <DisplayName>Callout.GetCreditCardDetails</DisplayName>
+    <Properties/>
+    <Request clearPayload="true" variable="getCreditCardDetailsRequest">
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+        <Copy source="request">
+            <Headers>true</Headers>
+        </Copy>
+    </Request>
+    <Response>response</Response>
+    <LocalTargetConnection>
+        <Path>/mock/v1/creditcard/account</Path>
+        <Properties>
+            <Property name="success.codes">1xx,2xx,3xx,4xx,5xx</Property>
+        </Properties>
+    </LocalTargetConnection>
+</ServiceCallout>
