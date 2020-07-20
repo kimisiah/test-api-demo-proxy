@@ -6,7 +6,7 @@
 - For API Proxy - ```cd src/api/api-demo/apiproxy```
 - Execute ```mvn install -Ptest -Dusername={apigee-edge-email} -Dpassword={apigee-edge-password} -Dorg={apigee-edge-org} -Dapigee.hosturl={your-api-host-url}```
 
-That's it! If everything ran smooth, you will see BUILD SUCCESS message at the of the execution of this command.
+That's it! If everything ran smooth, you will see BUILD SUCCESS message at the of the execution of this command...
 
 ## Basic Commands – apigee.options
 
